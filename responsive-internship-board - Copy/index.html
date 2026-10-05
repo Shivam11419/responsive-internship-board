@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internship Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Internship Board</h1>
+            <p>Find internships and start building your career.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="search-section" aria-labelledby="search-title">
+
+            <h2 id="search-title">Find an Internship</h2>
+
+            <div class="filters">
+
+                <div class="filter-group">
+                    <label for="searchInput">Search internships</label>
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search by title or skill..."
+                    >
+                </div>
+
+                <div class="filter-group">
+                    <label for="domainFilter">Select domain</label>
+                    <select id="domainFilter">
+                        <option value="all">All Domains</option>
+                        <option value="Full Stack Development">
+                            Full Stack Development
+                        </option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Data Analytics">
+                            Data Analytics
+                        </option>
+                        <option value="Cyber Security">
+                            Cyber Security
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section aria-labelledby="results-title">
+
+            <div class="results-header">
+                <h2 id="results-title">Available Internships</h2>
+                <p id="resultCount">Loading internships...</p>
+            </div>
+
+            <!-- Internship cards will appear here -->
+            <div
+                id="internshipList"
+                class="internship-grid"
+                aria-live="polite"
+            ></div>
+
+            <!-- Empty state -->
+            <div
+                id="emptyState"
+                class="state-message"
+                hidden
+            >
+                <h3>No internships found</h3>
+                <p>
+                    Try changing your search or selecting another domain.
+                </p>
+            </div>
+
+            <!-- Error state -->
+            <div
+                id="errorState"
+                class="state-message error"
+                hidden
+            >
+                <h3>Something went wrong</h3>
+                <p>
+                    We could not load the internship data.
+                    Please try again later.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Internship Board</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
